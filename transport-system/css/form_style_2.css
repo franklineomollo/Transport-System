@@ -1,0 +1,48 @@
+
+
+
+
+
+.long_input{
+	height:30px;
+	padding:3px;
+	width:620px;
+	border:1px solid #CCC;
+	color:#666;}
+.norm_input{
+	
+	height:30px;
+	padding:3px;
+	width:520px;
+	border:1px solid #CCC;
+	color:#666;}
+	
+.norm_select{
+	height:35px;
+	padding:4px;
+	width:528px;
+	border:1px solid #CCC;
+	color:#666; }	
+	
+.long_textarea{
+	height:80px;
+	padding:3px;
+	width:620px;
+	border:1px solid #CCC;
+	color:#666;}	
+	
+	
+	.normy_input{
+	
+	height:25px;
+	padding:3px;
+	width:420px;
+	border:1px solid #CCC;
+	color:#666;}
+	
+.normy_select{
+	height:30px;
+	padding:4px;
+	width:428px;
+	border:1px solid #CCC;
+	color:#666; }

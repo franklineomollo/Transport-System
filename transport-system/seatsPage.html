@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Seats Layout</title>
+	<script src ="css/basi_style.css"type="text/javascript"></script>
+	<script src ="css/rebrand_style.css"type="text/javascript"></script>
+	<script src ="css/form_style_2.css"type="text/javascript"></script>
+	<script src ="css/tables.css"type="text/javascript"></script>
+
+	<script src="js/jquery.js"></script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+var retval = true;
+$(document).ready(function() {
+ $('.seatlist').submit(function() {
+        var no = $("input:checkbox:checked").length;
+        if (no==0) {
+		    $(".notic").removeAttr("style");
+           var message='You must select a seat to proceed!';
+		   $(".notic").html(message);		
+		   var retval = false;
+           //return false; // The form will *not* submit
+        }
+		else if(no>2) {
+		    $(".notic").removeAttr("style");
+           var message='You can only select 2 seats!';
+		   $(".notic").html(message);		
+		   var retval = false;
+           //return false; // The form will *not* submit
+        }
+		else {
+		 
+			$(':submit').attr('value', 'Please wait...');
+			$(':submit').attr('disabled', 'true');
+		var c = checkseat();
+		//alert (c);
+		 var retval = c;
+		}
+			
+		return retval;
+		   });
+		   
+		   });
+</script>
+
+
+<table>
+  <tr><td width="480" valign="top">
+    
+  <div class="buslay"  >
+  
+    
+        
+    
+  <div id="baasi">
+  <br />
+    
+  <font size="+1" color="#FFFFFF">Normal Bus</font>
+  <BR ><br />
+   <form id="normal" class="seatlist" action="http://www.modern.co.ke/index.php/online/payment/" method="post" > 
+    <table id="my_bus"   border="0" cellspacing="1" cellpadding="1" align="center" >
+      <tr>
+        <td colspan="2">VIP</td>
+        <td rowspan="6"><input type="hidden" name="returntrip" value="" /><input name="mbustype" type="hidden" value="Normal" />
+          <input name="departure" type="hidden" value="12:30 AM" />
+          </td>
+        <td colspan="4"> <div id='a'>Driver</div></td>
+        </tr>
+      <tr>
+        <td><div id='a' >1  </div></td>
+        <td>&nbsp;</td>
+        <td colspan="4">1st Class</td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-12' class='regular-checkbox'   value='2 Vip'><label for='checkbox-1-12'></label><br />
+2</div></td>
+        <td>&nbsp;</td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-13' class='regular-checkbox'   value='3 Fcls'><label for='checkbox-1-13'></label><br />
+3</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-14' class='regular-checkbox'   value='4 Fcls'><label for='checkbox-1-14'></label><br />
+4</div></td>
+        </tr>
+      <tr>
+        <td colspan="2"> Door</td>
+        <td colspan="4">V.I.P</td>
+        </tr>
+      <tr>
+        <td colspan="2">1st Class</td>
+        <td width="10%">&nbsp;</td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-15' class='regular-checkbox'   value='5 Vip'><label for='checkbox-1-15'></label><br />
+5</div></td>
+        <td width="11%">&nbsp;</td>
+        </tr>
+      <tr>
+        <td><div id='a' >7  </div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-18' class='regular-checkbox'   value='8 Fcls'><label for='checkbox-1-18'></label><br />
+8</div></td>
+        <td>&nbsp;</td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-16' class='regular-checkbox'   value='6 Vip'><label for='checkbox-1-16'></label><br />
+6</div></td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td colspan="7">Business Class</td>
+        </tr>
+      <tr>
+        <td><div id='a' >9  </div></td>
+        <td><div id='a' >10  </div></td>
+        <td rowspan="8">&nbsp;</td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-111' class='regular-checkbox'   value='11'><label for='checkbox-1-111'></label><br />
+11</div></td>
+        <td colspan="2"><div id='a' >12  </div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-113' class='regular-checkbox'   value='13'><label for='checkbox-1-113'></label><br />
+13</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-114' class='regular-checkbox'   value='14'><label for='checkbox-1-114'></label><br />
+14</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-115' class='regular-checkbox'   value='15'><label for='checkbox-1-115'></label><br />
+15</div></td>
+        <td colspan="2"><div id='a' >16  </div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-117' class='regular-checkbox'   value='17'><label for='checkbox-1-117'></label><br />
+17</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-118' class='regular-checkbox'   value='18'><label for='checkbox-1-118'></label><br />
+18</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-119' class='regular-checkbox'   value='19'><label for='checkbox-1-119'></label><br />
+19</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-120' class='regular-checkbox'   value='20'><label for='checkbox-1-120'></label><br />
+20</div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-121' class='regular-checkbox'   value='21'><label for='checkbox-1-121'></label><br />
+21</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-122' class='regular-checkbox'   value='22'><label for='checkbox-1-122'></label><br />
+22</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-123' class='regular-checkbox'   value='23'><label for='checkbox-1-123'></label><br />
+23</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-124' class='regular-checkbox'   value='24'><label for='checkbox-1-124'></label><br />
+24</div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-125' class='regular-checkbox'   value='25'><label for='checkbox-1-125'></label><br />
+25</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-126' class='regular-checkbox'   value='26'><label for='checkbox-1-126'></label><br />
+26</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-127' class='regular-checkbox'   value='27'><label for='checkbox-1-127'></label><br />
+27</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-128' class='regular-checkbox'   value='28'><label for='checkbox-1-128'></label><br />
+28</div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-129' class='regular-checkbox'   value='29'><label for='checkbox-1-129'></label><br />
+29</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-130' class='regular-checkbox'   value='30'><label for='checkbox-1-130'></label><br />
+30</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-131' class='regular-checkbox'   value='31'><label for='checkbox-1-131'></label><br />
+31</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-132' class='regular-checkbox'   value='32'><label for='checkbox-1-132'></label><br />
+32</div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-133' class='regular-checkbox'   value='33'><label for='checkbox-1-133'></label><br />
+33</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-134' class='regular-checkbox'   value='34'><label for='checkbox-1-134'></label><br />
+34</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-135' class='regular-checkbox'   value='35'><label for='checkbox-1-135'></label><br />
+35</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-136' class='regular-checkbox'   value='36'><label for='checkbox-1-136'></label><br />
+36</div></td>
+        </tr>
+      <tr>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-137' class='regular-checkbox'   value='37'><label for='checkbox-1-137'></label><br />
+37</div></td>
+        <td><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-138' class='regular-checkbox'   value='38'><label for='checkbox-1-138'></label><br />
+38</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-139' class='regular-checkbox'   value='39'><label for='checkbox-1-139'></label><br />
+39</div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-140' class='regular-checkbox'   value='40'><label for='checkbox-1-140'></label><br />
+40</div></td>
+        </tr>
+      <tr>
+        <td width="20%"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-141' class='regular-checkbox'   value='41'><label for='checkbox-1-141'></label><br />
+41</div></td>
+        <td width="20%"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-142' class='regular-checkbox'   value='42'><label for='checkbox-1-142'></label><br />
+42</div></td>
+        <td width="20%"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-143' class='regular-checkbox'   value='43'><label for='checkbox-1-143'></label><br />
+43</div></td>
+        <td colspan="2"><div id='a' >44  </div></td>
+        <td colspan="2"><div  id='seat_aval'><input type='checkbox' name='seat[]' id='checkbox-1-145' class='regular-checkbox'   value='45'><label for='checkbox-1-145'></label><br />
+45</div></td>
+        </tr>
+          <tr>
+        <td colspan="7" align="center"><font color="#0033FF">Please select seat(s) then click Submit button</td>
+      </tr>
+      <tr>
+        <td colspan="7" align="center"><input type="submit" name="submit" class="button_1" value="Submit" /></td>
+        </tr>
+  </table>
+  </form>
+  </div>
+
+
+  </td><td width="602" valign="bottom"><div class="seat_link" style="width:500px; text-align:left;">
+    <p><br />
+      <img src="http://www.modern.co.ke//style/rebrand/components/seat_available.png"  /> &nbsp;&nbsp;&nbsp;  Available seats <br />
+      <br />
+      <img src="http://www.modern.co.ke//style/rebrand/components/seat_booked.png"  /> &nbsp;&nbsp;&nbsp; Occupied seat <br />
+      <br />
+      Click in a seat number of choice to proceed
+      to payments </p> <br /> <br />
+    <table width="352" height="200px" border="0" cellspacing="0" cellpadding="0" style="text-align:left;">
+      <tr>
+        <td width="253" ><div align="left">Bus Name</div></td>
+        <td width="99" ><div align="left">Normal</div></td>
+        </tr>
+      <tr>
+        <td><div align="left">Reporting Time</div></td>
+        <td><div align="left">
+          12:00 AM          </div></td>
+        </tr>
+      <tr>
+        <td><div align="left">Departure Time</div></td>
+        <td><div align="left">12:30 AM</div></td>
+        </tr>
+      <tr>
+        <td><div align="left"></div></td>
+        <td><div align="left"></div></td>
+        </tr>
+      <tr>
+        <td><div align="left">VIP Seat Price</div></td>
+        <td><div align="left">
+          KES          1600</div></td>
+        </tr>
+      <tr>
+        <td><div align="left">First Class Seat Price</div></td>
+        <td><div align="left">
+          KES          1400</div></td>
+        </tr>
+        
+      <tr>
+        <td><div align="left">Business Class Seat Price</div></td>
+        <td><div align="left">
+          KES          1300</div></td>
+        </tr>
+        
+        <tr>
+          <td colspan="2"></td>
+          </tr>
+                                       </table>
+       <br /> <br />
+      </div>
+    
+    
+    
+    
+</td></tr></table>
+
+
+
+
+</body>
+</html>

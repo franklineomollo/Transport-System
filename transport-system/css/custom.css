@@ -1,0 +1,44 @@
+.navbar-text>a{
+color:inherit;
+text-decoration: none;
+}
+.panel-default{
+border-color:#000033;
+border-width:thin;
+}
+/*!Author: Frankline Omollo*/
+body{
+padding-top: 80px;
+background-image:url(../images/skulls.png);
+}
+body#registration{
+padding-bottom: 150px;
+}
+body#constituency{
+padding-bottom: 100px;
+}
+body#personal{
+padding-bottom: 100px;
+}
+body#university{
+padding-bottom: 100px;
+}
+body#bank{
+padding-bottom: 100px;
+}
+body#family{
+padding-bottom: 150px;
+}
+label {
+padding-top:20px;
+}
+#Female{
+padding-left:10px;
+}
+/*!Author: Frankline Omollo*/
+.navbar{
+background-color:#000033;
+}
+table, th, td{
+border:1px solid black;
+}

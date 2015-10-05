@@ -1,0 +1,106 @@
+body{
+
+	background-image: url(img_background.png);
+	font-family: Comic Sans MS;
+	font-size: 15px;
+
+
+
+}
+
+#topjumbotron{
+	padding:0px !important; 
+	background-image: url(bus_header.jpg);
+	text-align: center;
+	color: black;
+	
+
+}
+
+#middlejumbotron{
+
+	background-image: url(bus2.jpg);
+	height: 480px;
+
+}
+
+#middlejumbotronDetails{
+
+	background-image: url(bus_header.jpg);
+}
+
+#jumbotroncustomerDetails{
+
+	background-image: url(bus_header.jpg);
+
+}
+
+#booking_details{
+
+	color: black;
+}
+#Personal_details{
+	color: black;
+}
+#detailsform{
+
+	padding-top: 10px;
+	border-color: #ffffff;
+}
+
+
+
+#bottomjumbotron{
+
+	height: 63px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	background-image: url(bus_header.jpg);
+	color: black;
+
+
+}
+#fare-summary{
+
+	font-size: 15px;
+	font-weight: bold;
+
+}
+#admin_notification{
+
+	margin-bottom: 5px;
+	color: black;
+}
+
+#admin_table{
+	border: 2px solid black;
+
+}
+
+#bus_seats_layout{
+
+	width: 670px;
+	height: 417px;
+	padding: 2px !important;
+	margin-left: 0px!important;
+	background-color: gray;
+}
+
+#seatstable{
+
+	margin-right: 2px;
+	
+}
+#custSpecsContainer{
+
+	height: 417px;
+	width: 320px;
+
+}
+#ticketHeader{
+
+text-align: center;
+}
+
+
+

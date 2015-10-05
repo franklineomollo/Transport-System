@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Datepicker</title>
+
+  <!-- add styles -->
+<link href="jquery-ui-1.11.2.custom/css/ui-lightness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+
+<script>
+$function(){
+$.datepicker.setDefaults($.extend(
+  $.datepicker.regional[''])
+);
+$('#datepicker').datepicker({
+  beforeShow: function(input) {
+    $(input).css('background-color','#ff0');
+  },
+  onSelect: function(dateText, obj) {
+    $(this).css('background-color','');
+    alert('Selected: ' + dateText +
+      "\n\nid: " + obj.id +
+      "\nselectedDay: " + obj.selectedDay +
+      "\nselectedMonth: " + obj.selectedMonth +
+      "\nselectedYear: " + obj.selectedYear);
+  },
+  onClose: function(dateText, obj) {
+    $(this).css('background-color','');
+  }
+});
+</script>
+
+</head>
+<body>
+
+
+
+<input id="datepicker" type="text" />
+
+<!-- add scripts -->
+<script src="jquery-ui-1.11.2.custom/js/jquery.191.js"></script>
+<script src="jquery-ui-1.11.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+</body>
+</html>
+
